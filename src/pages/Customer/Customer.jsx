@@ -1,24 +1,15 @@
 import React, { useEffect, useState } from "react";
 import CircleLayer from "../../assets/icons/Circle Layer.jpg";
-// import UnderGround from "../../assets/icons/Object Ungroup.jpg";
-// import Scenery from "../../assets/icons/Scenery.jpg";
-// import Teamwork from "../../assets/icons/User Arrows.jpg";
-// import Rocket from "../../assets/icons/Rocket.jpg";
-// import Bag from "../../assets/icons/Bag.jpg";
-// import Cube from "../../assets/icons/Cube.jpg";
+import UnderGround from "../../assets/icons/Object Ungroup.jpg";
+import Scenery from "../../assets/icons/Scenery.jpg";
+import Teamwork from "../../assets/icons/User Arrows.jpg";
+import Rocket from "../../assets/icons/Rocket.jpg";
+import Bag from "../../assets/icons/Bag.jpg";
+import Cube from "../../assets/icons/Cube.jpg";
 import Fade from "react-reveal/Fade";
 import Flip from "react-reveal/Flip";
-import axios from "axios";
 
 const Customer = () => {
-  const [card, setCard] = useState([]);
-
-  useEffect(() => {
-    axios({
-      method: "get",
-      url: "http://localhost:5000/card",
-    }).then((res) => setCard(res.data));
-  }, []);
   return (
     <div className="customer__container">
       <Fade left cascade>
@@ -33,19 +24,116 @@ const Customer = () => {
         </p>
       </Fade>
       <div className="customer__cards">
-        {card.map((item, index) => (
-          <Flip top>
-            <div className="customer__card" key={index}>
-              <div className="customer__card__image">
-                <img src={CircleLayer} alt="image" />
-              </div>
-              <div className="customer__card__text">
-                <h2 className="customer__card__text__title">{item.title}</h2>
-                <p className="customer__card__text__paragraph">{item.body}</p>
-              </div>
+        <Flip top>
+          <div className="customer__card">
+            <div className="customer__card__image">
+              <img src={CircleLayer} alt="image" />
             </div>
-          </Flip>
-        ))}
+            <div className="customer__card__text">
+              <h2 className="customer__card__text__title">Integrity</h2>
+              <p className="customer__card__text__paragraph">
+                Displaying the highest level of Integrity in the way we conduct
+                our business
+              </p>
+            </div>
+          </div>
+        </Flip>
+        <Flip top>
+          <div className="customer__card">
+            <div className="customer__card__image">
+              <img src={UnderGround} alt="image" />
+            </div>
+            <div className="customer__card__text">
+              <h2 className="customer__card__text__title">Demonstrate</h2>
+              <p className="customer__card__text__paragraph">
+                Demonstrating a strong Will to Win in the market place
+              </p>
+            </div>
+          </div>
+        </Flip>
+        <Flip top>
+          <div className="customer__card">
+            <div className="customer__card__image">
+              <img src={Scenery} alt="image" />
+            </div>
+            <div className="customer__card__text">
+              <h2 className="customer__card__text__title">Diversity</h2>
+              <p className="customer__card__text__paragraph">
+                Promoting Diversity in the work place and community
+              </p>
+            </div>
+          </div>
+        </Flip>
+        <Flip top>
+          <div className="customer__card">
+            <div className="customer__card__image">
+              <img src={Teamwork} alt="image" />
+            </div>
+            <div className="customer__card__text">
+              <h2 className="customer__card__text__title">Integrity</h2>
+              <p className="customer__card__text__paragraph">
+                Displaying the highest level of Integrity in the way we conduct
+                our business
+              </p>
+            </div>
+          </div>
+        </Flip>
+        <Flip top>
+          <div className="customer__card">
+            <div className="customer__card__image">
+              <img src={Rocket} alt="image" />
+            </div>
+            <div className="customer__card__text">
+              <h2 className="customer__card__text__title">Teamwork</h2>
+              <p className="customer__card__text__paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. A
+                semper aenean id pen
+              </p>
+            </div>
+          </div>
+        </Flip>
+        <Flip top>
+          <div className="customer__card">
+            <div className="customer__card__image">
+              <img src={Bag} alt="image" />
+            </div>
+            <div className="customer__card__text">
+              <h2 className="customer__card__text__title">Collaboration</h2>
+              <p className="customer__card__text__paragraph">
+                Displaying the highest level of Integrity in the way we conduct
+                our business
+              </p>
+            </div>
+          </div>
+        </Flip>
+        <Flip top>
+          <div className="customer__card">
+            <div className="customer__card__image">
+              <img src={Cube} alt="image" />
+            </div>
+            <div className="customer__card__text">
+              <h2 className="customer__card__text__title">Technology</h2>
+              <p className="customer__card__text__paragraph">
+                Harnessing the power of Technology to deliver better customer
+                experience
+              </p>
+            </div>
+          </div>
+        </Flip>
+        <Flip top>
+          <div className="customer__card">
+            <div className="customer__card__image">
+              <img src={CircleLayer} alt="image" />
+            </div>
+            <div className="customer__card__text">
+              <h2 className="customer__card__text__title">Corporate</h2>
+              <p className="customer__card__text__paragraph">
+                Setting the standard for the best Corporate Citizenship in the
+                communities we work
+              </p>
+            </div>
+          </div>
+        </Flip>
       </div>
     </div>
   );
