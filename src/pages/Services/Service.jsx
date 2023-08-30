@@ -21,7 +21,7 @@ const Service = () => {
           </p>
         </Slide>
         <div className="service__cards">
-          <Zoom top cascade >
+          <Zoom top cascade>
             <div className="service__card">
               <img src={ServiceImg} alt="" />
               <div className="card-text">
