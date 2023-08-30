@@ -1,0 +1,544 @@
+@use 'Variables';
+@use 'Constans';
+@import url('https://fonts.cdnfonts.com/css/metropolis-2');
+
+.main__container {
+    font-family: 'Metropolis', sans-serif;
+    .nav__container {
+        @include Constans.display;
+        width: Variables.$width;
+        margin: Variables.$margin;
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        left: 8%;
+        z-index: 200;
+        .nav__logo {
+            .logo {
+                width: 109px;
+                height: 53px;
+            }
+        }
+        .nav__links__wrapper {
+            margin-left: -70px;
+            .nav__links {
+                @include Constans.display;
+                gap: 38px;
+                .nav__link {
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 20px;
+                    letter-spacing: 2px;
+                    cursor: pointer;
+                    a {
+                        color: #000;
+                        &:hover {
+                            color: red
+                          }
+                    }
+                }
+            }
+        }
+        .nav__icon-btn {
+            @include Constans.display;
+            gap: 25px;
+            .nav__search {
+                width: 24px;
+                height: 24px;
+              &:hover {
+                transform: scale(1.2);
+              }
+            }
+            .nav__button {
+                padding: 12px 34px;
+                border: none;
+                background-color: Variables.$btn-clr;
+                color: Variables.$white;
+                border-radius: 4px;
+                font-size: 12px;
+                transition: all .2s;
+                position: relative;
+              &:hover {
+                position: relative;
+                top: -3px;
+                box-shadow: -6px 14px 12px 2px rgba(90, 90, 90, .12);
+              }
+            }
+        }
+        .dot__wrapper {
+            display: none
+        }
+    }
+    .home__container {
+        @include Constans.display;
+        .home__header {
+            font-size: 63px;
+            font-weight: 900;
+            width: 80%;
+        }
+        .home__paragraph {
+            font-weight: 400;
+            font-size: 18px;
+            margin: 28px 0;
+            width: 62%;
+        }
+        .home__leftbar {
+            width: 45%;
+            margin-left: 130px;
+            .home__btn-wrapper {
+                @include Constans.flex;
+                gap: 20px;
+                .home__btn {
+                    padding: 10px 32px;
+                    border: none;
+                    background-color: Variables.$btn-clr;
+                    border-radius: 4px;
+                    color: Variables.$white;
+                }
+                .home__outline-btn {
+                    background-color: #fff;
+                    border: 1px solid Variables.$btn-clr;
+                    color: Variables.$btn-clr;
+                }
+            }
+            .home__social {
+                @include Constans.flex;
+                gap: 20px;
+                position: absolute;
+                bottom: 3%;
+                .social__phone {
+                    @include Constans.display;
+                    gap: 8px
+                }
+                .social__images {
+                    @include Constans.display;
+                    gap: 8px;
+                }
+            }
+        }
+        .home__rightbar {
+            width: 50%;
+            top: 0;
+            position: absolute;
+            @include Constans.flex;
+            background-color: #FFEAF5;
+            justify-content: start;
+            position: relative;
+            .rightbar_layer {
+                width: 705px;
+                height: 654px;
+                margin-left: -100px;
+                margin-top:30px;
+                object-fit: contain;
+            }
+            .home__loan {
+                background-color: Variables.$white;
+                height: 71px;
+                width: 191px;
+                top: 16%;
+                left: -9%;
+                box-shadow: 4px 4px 58px 0px rgba(0, 0, 0, 0.12);
+                position: absolute;
+                @include Constans.flex;
+                gap: 20px;
+                align-items: center;
+                justify-content: center;
+                padding: 0px 27px;
+                border-radius: 55px;
+            }
+            .car__loan {
+                background-color: Variables.$white;
+                height: 71px;
+                width: 200px;
+                position: absolute;
+                top: 29%;
+                right: 16%;
+                @include Constans.flex;
+                gap:20px;
+                align-items: center;
+                justify-content: center;
+                padding: 0px 27px;
+                border-radius: 55px;
+            }
+        } 
+    }
+    .customer__container {
+        margin: auto;
+        margin-top: 90px ;
+        width: Variables.$width;
+        .customer__header {
+            text-align: center;
+            font-size: 36px;
+        }
+        .customer__paragraph {
+            width: 50%;
+            margin: 20px auto;
+            text-align: center;
+            font-size: 15px;
+            color: Variables.$paragraph-text-clr;
+        }
+        .customer__cards {
+            width: 90%;
+            margin: auto;
+            margin-top: 50px;
+            @include Constans.flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+            .customer__card {
+                width: 21%;
+                padding: 10px;
+                border-radius: 5px;
+               &:hover {
+                cursor: pointer;
+                box-shadow: 0px 18px 58px 16px rgba(0, 0, 0, 0.06);
+               }
+                .customer__card__text__title {
+                    margin: 12px 0;
+                }
+                .customer__card__text__paragraph {
+                    width: 70%;
+                }
+            }
+        }
+    }
+    .partner__container {
+        text-align: center;
+        background: rgba(252, 224, 239, 0.20);
+        padding: 60px 20px;
+        margin-top: 70px;
+        .partner__img {
+            margin-top: 70px;
+        }
+    }
+    .glance__container {
+        @include Constans.display;
+        gap: 80px;
+        .glance-right__paragraph {
+            width: 50%;
+             font-weight: 400;
+             line-height: 29px;
+             margin: 15px 0;
+        }
+        .glance__button {
+            display: flex;
+            align-items: center;
+            border: none;
+            background-color: transparent;
+            color: Variables.$btn-clr;
+            font-size: 19.333px;
+            margin-top: 30px;
+        }
+    }
+    .main__service_container {
+        background: #FEF9FC;
+        .service__container {
+            width: Variables.$width;
+            margin: auto;
+            padding: 70px 20px;
+            .service__header {
+                text-align: center;
+            }
+            .service__paragraph {
+                margin: 14px 0;
+                text-align: center;
+            }
+            .service__cards {
+                @include Constans.flex;
+                margin-top: 40px;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .card-text {
+                @include Constans.flex;
+                margin-top: 8px;
+                align-items: center;
+                h2 {
+                    width: 80%;
+                    font-size: 21px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 35px; 
+                    letter-spacing: 1px
+                }
+                img {
+                    width: 37px;
+                    height: 37px;
+                    border-radius: 50%;
+                }
+                }
+            }
+        }
+    }
+    .results__container {
+        width: Variables.$width;
+        margin: Variables.$margin;
+        padding: 120px 0;
+        .results__header {
+            text-align: center;
+        }
+        .results__paragraph {
+            text-align: center;
+            margin: 10px 0;
+        }
+        .results__cards {
+            @include Constans.flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 95%;
+            margin: auto;
+            margin-top: 48px;
+            .results__card {
+            width: 22%;
+            padding: 20px;
+            .results__count {
+                margin: 10px 0;
+            }
+                .count {
+                    color: Variables.$btn-clr;
+                }
+            }
+        }
+    }
+    .newsletter__container {
+        @include Constans.display;
+        flex-direction: column;
+        background: #FEF9FC;
+        padding: 140px 0;
+        .newsletter__header {
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 43px;
+        }
+        .newsletter__paragraph {
+            margin: 20px 0;
+            width: 26%;
+            line-height: 22px;
+            text-align: center;
+        }
+        .newsletter__input {
+            display: flex;
+            gap: 5px;
+            input {
+                width: 343px;
+                padding: 12px 15px;
+                border: 1px solid #CCC;
+                border-radius: 4px;
+                &:focus {
+                    outline: none;
+                }
+            }
+            .newsletter__btn {
+                background-color: Variables.$btn-clr;
+                font-size: 14px;
+                font-style: normal;
+                padding: 12px 32px;
+                color: Variables.$white;
+                font-weight: 600;
+                border-radius: 4px;
+                border: none;
+                cursor: pointer;
+                transition: all .5s;
+                &:hover {
+                    transform: scale(.9) !important;
+                }
+            }
+        }
+    }
+    .footer__container {
+        .footer__links {
+            width: Variables.$width;
+            margin: auto;
+            flex-wrap: wrap;
+            padding: 80px 20px;
+            @include Constans.flex;
+            justify-content: space-between;
+                .link {
+                    width: 20%;
+                }
+                .link__paragraph {
+                    width: 80%;
+                    margin: 32px 0;
+                    color: Variables.$text-clr;
+                }
+                .social__icons{
+                    @include Constans.flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+                .first__link {
+                    margin-top: 20px;
+                }
+                li {
+                    margin: 15px 0;
+                    color: Variables.$text-clr;
+                }
+                .phone__link {
+                    @include Constans.flex;
+                    align-items: start;
+                    gap: 10px;
+                    p {
+                        margin-top: 4px;
+                    }
+                }
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .nav__container {
+        width: 100% !important;
+        left: 0 !important;
+        .nav__links__wrapper {
+            display: none;
+        }
+        .nav__icon-btn {
+            display: none !important;
+        }
+        .dot__wrapper {
+            display: flex !important;
+            flex-direction: column;
+            gap: 6px;
+            .dot {
+                width: 40px;
+                height: 8px;
+                background-color: grey;
+            }
+        }
+        .modal {
+            width: 100% !important;
+            padding: 120px 0;
+        }
+    }
+    .home__container {
+        flex-direction: column;
+        .home__leftbar {
+            width: 100% !important;
+            margin-left: 0 !important;
+            margin-top: 100px !important;
+            text-align: center;
+            .home__header {
+                font-size: 45px;
+                width: 100% !important;
+            }
+            .home__paragraph {
+                width: 100% !important;
+            }
+            .home__btn-wrapper {
+                justify-content: center;
+            }
+        }
+        .home__rightbar {
+            width: 100% !important;
+            margin-top: 20px;
+            .rightbar_layer {
+                width:390px !important;
+                height: 454px !important;
+                margin: 0 !important;
+            }
+            .home__loan {
+                top: 3.4% !important;
+                left: 5% !important;
+            }
+            .car__loan {
+                right: 1% !important;
+            }
+        }
+    }
+    .customer__container {
+        .customer__header {
+            text-align: center;
+            font-size: 28px !important;
+        }
+        .customer__paragraph {
+            width: 100% !important;
+            font-size: 15px;
+            color: Variables.$paragraph-text-clr;
+        }
+        .customer__cards {
+            width: 100% !important;
+            .customer__card {
+               width: 100% !important;
+            }
+        }
+    }
+    .glance__container {
+        flex-direction: column;
+        .glance__left {
+            width: 100% !important;
+            img {
+                width: 100% !important;
+            }
+        }
+        .glance__right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .glance-right__paragraph {
+                width: 90% !important; 
+                text-align: center;
+                font-size: 15px !important;
+            }
+            .glance__button {
+              margin-top: 10px ;
+            }
+        }
+    }
+    .service__container {
+        width: 100% !important;
+        .service__cards {
+            gap: 15px;
+            .service__card {
+              width: 100% !important;
+              img {
+                width: 100%;
+              }
+            }
+        }
+    }
+    .results__container {
+        .results__header {
+            font-size:28px;
+        }
+        .results__cards {
+            width: 100% !important;
+            gap: 10px;
+            .results__card {
+                width: 100% !important;
+            }
+        }
+    }
+    .newsletter__container {
+        .newsletter__paragraph {
+            width: 100% !important;
+            padding: 0 10px;
+        }
+        input {
+            width: 203px !important;
+        }
+        .newsletter__btn {
+            font-size: 12px !important;
+            padding: 12px 8px !important;
+        }
+    }
+    .footer__container {
+        .footer__links {
+            width: 100% !important;
+            gap: 20px;
+            .link__paragraph  {
+                width: 100% !important;
+            }
+            .footer__link {
+               width: 45% !important;
+            }
+            .phone__link  {
+                justify-content: center;
+                width: 100% !important;
+            }
+            li {
+                font-size: 14px !important;
+            }
+        }
+    }
+}
