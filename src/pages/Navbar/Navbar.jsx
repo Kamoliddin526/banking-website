@@ -59,35 +59,34 @@ const Navbar = () => {
       <Modal
         className="modal"
         open={isModalOpen}
-        okButtonProps={{ display: "none" }}
-        cancelButtonProps={{ display: "none" }}
+        footer={null}
         onOk={handleOk}
       >
-        <div className="nav__links__wrapper">
-          <ul className="nav__links">
-            <li className="nav__link">
+        <div className="nav__wrapper">
+          <ul className="links">
+            <li className="link">
               <a href="#">RETAIL</a>
             </li>
-            <li className="nav__link">
+            <li className="link">
               <a href="#">SME</a>
             </li>
-            <li className="nav__link">
+            <li className="link">
               <a href="#">CORPORATE</a>
             </li>
-            <li className="nav__link">
+            <li className="link">
               <a href="#">ABOUT US</a>
             </li>
-            <li className="nav__link">
+            <li className="link">
               <a href="#">COVID 19</a>
             </li>
-            <li className="nav__link">
+            <li className="link">
               <a href="#">CAMPAIGNS</a>
             </li>
           </ul>
         </div>
-        <div className="nav__icon-btn">
-          <img className="nav__search" src={Search} alt="search" />
-          <button className="nav__button">iService</button>
+        <div className="icon-btn">
+          <img className="search" src={Search} alt="search" />
+          <button className="button">iService</button>
         </div>
       </Modal>
     </div>
